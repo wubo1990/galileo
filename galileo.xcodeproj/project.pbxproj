@@ -22,6 +22,10 @@
 		92A1EDA719C22FF8006512E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A1ED8619C22FF8006512E0 /* UIKit.framework */; };
 		92A1EDAF19C22FF8006512E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92A1EDAD19C22FF8006512E0 /* InfoPlist.strings */; };
 		92A1EDB119C22FF8006512E0 /* galileoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A1EDB019C22FF8006512E0 /* galileoTests.m */; };
+		92A1EDBB19C243CA006512E0 /* GalileoControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A1EDBA19C243CA006512E0 /* GalileoControl.framework */; };
+		92A1EDBD19C364FE006512E0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A1EDBC19C364FE006512E0 /* CoreBluetooth.framework */; };
+		92A1EDBF19C365E3006512E0 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A1EDBE19C365E3006512E0 /* ExternalAccessory.framework */; };
+		92A1EDC119C36600006512E0 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A1EDC019C36600006512E0 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		92A1EDAC19C22FF8006512E0 /* galileoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "galileoTests-Info.plist"; sourceTree = "<group>"; };
 		92A1EDAE19C22FF8006512E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92A1EDB019C22FF8006512E0 /* galileoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = galileoTests.m; sourceTree = "<group>"; };
+		92A1EDBA19C243CA006512E0 /* GalileoControl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GalileoControl.framework; path = "../../../../Downloads/motrr-Galileo-iOS-SDK-68f3c23/frameworks/GalileoControl.framework"; sourceTree = "<group>"; };
+		92A1EDBC19C364FE006512E0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		92A1EDBE19C365E3006512E0 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		92A1EDC019C36600006512E0 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A1EDC119C36600006512E0 /* libxml2.dylib in Frameworks */,
+				92A1EDBF19C365E3006512E0 /* ExternalAccessory.framework in Frameworks */,
+				92A1EDBD19C364FE006512E0 /* CoreBluetooth.framework in Frameworks */,
+				92A1EDBB19C243CA006512E0 /* GalileoControl.framework in Frameworks */,
 				92A1ED8519C22FF8006512E0 /* CoreGraphics.framework in Frameworks */,
 				92A1ED8719C22FF8006512E0 /* UIKit.framework in Frameworks */,
 				92A1ED8319C22FF8006512E0 /* Foundation.framework in Frameworks */,
@@ -103,6 +115,10 @@
 		92A1ED8119C22FF8006512E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92A1EDC019C36600006512E0 /* libxml2.dylib */,
+				92A1EDBE19C365E3006512E0 /* ExternalAccessory.framework */,
+				92A1EDBC19C364FE006512E0 /* CoreBluetooth.framework */,
+				92A1EDBA19C243CA006512E0 /* GalileoControl.framework */,
 				92A1ED8219C22FF8006512E0 /* Foundation.framework */,
 				92A1ED8419C22FF8006512E0 /* CoreGraphics.framework */,
 				92A1ED8619C22FF8006512E0 /* UIKit.framework */,
@@ -390,9 +406,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bowu/Downloads/motrr-Galileo-iOS-SDK-68f3c23/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "galileo/galileo-Prefix.pch";
 				INFOPLIST_FILE = "galileo/galileo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,9 +424,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/bowu/Downloads/motrr-Galileo-iOS-SDK-68f3c23/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "galileo/galileo-Prefix.pch";
 				INFOPLIST_FILE = "galileo/galileo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
